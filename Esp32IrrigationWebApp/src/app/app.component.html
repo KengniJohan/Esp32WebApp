@@ -14,7 +14,7 @@
       <div class="flex-5/6 h-full bg-white shadow-lg rounded-xl flex flex-col">
         <div class="flex-1/12 flex flex-row justify-between items-center p-4">
           <span class="font-semibold text-xl text-gray-700">Les arosages</span>
-          <button class="bg-green-800 rounded-sm px-4 py-1 text-sm text-white cursor-pointer active:scale-95">Voir
+          <button class="bg-green-800 rounded-sm px-4 py-1 text-sm text-white cursor-pointer active:scale-95" (click)="openIrrigationListViewDialog()">Voir
             plus</button>
         </div>
         <div class="flex-11/12 flex flex-row">
@@ -40,13 +40,13 @@
         l'arosage</button>
       <div class="bg-white shadow-lg rounded-xl h-full p-4 flex flex-col gap-4">
         <div class="flex-1/12 flex justify-between items-center">
-          <span class="font-semibold text-xl text-gray-700">Les irrigations annulées</span>
-          <button class="bg-green-800 rounded-sm px-4 py-1 text-sm text-white cursor-pointer active:scale-95">Voir
+          <span class="font-semibold text-xl text-gray-700">Les arrosages annulés</span>
+          <button class="bg-green-800 rounded-sm px-4 py-1 text-sm text-white cursor-pointer active:scale-95" (click)="openCancelledIrrigationViewDialog()">Voir
             plus</button>
         </div>
         <div class="flex-11/12 flex flex-col gap-4">
-          <canceled-irrigation-tile hourRange="08:00 - 08:30" dateRange="08 / 07 / 2025" reason="Pluie" />
-          <canceled-irrigation-tile hourRange="16:00 - 16:30" dateRange="07 / 07 / 2025" reason="Pluie" />
+          <cancelled-irrigation-tile hourRange="08:00 - 08:30" dateRange="08 / 07 / 2025" reason="Pluie" />
+          <cancelled-irrigation-tile hourRange="16:00 - 16:30" dateRange="07 / 07 / 2025" reason="Pluie" />
         </div>
       </div>
     </div>
