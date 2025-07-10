@@ -6,6 +6,7 @@ import { CancelledIrrigationTileComponent } from "./components/cancelled-irrigat
 import { MatDialog } from '@angular/material/dialog';
 import { IrrigationListViewComponent } from './components/irrigation-list-view/irrigation-list-view.component';
 import { CancelledIrrigationListViewComponent } from './components/cancelled-irrigation-list-view/cancelled-irrigation-list-view.component';
+import { IrrigationPlanFormComponent } from './components/irrigation-plan-form/irrigation-plan-form.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,12 @@ import { CancelledIrrigationListViewComponent } from './components/cancelled-irr
 })
 export class AppComponent {
   title = "Système d'arrosage intelligent";
+  isIrrigating = false;
   readonly dialog = inject(MatDialog);
+
+  changeIrrigationStatus(): void {
+    this.isIrrigating = !this.isIrrigating;
+  }
 
   openIrrigationListViewDialog(): void {
     this.dialog.open(IrrigationListViewComponent);
@@ -29,5 +35,9 @@ export class AppComponent {
 
   openCancelledIrrigationViewDialog(): void {
     this.dialog.open(CancelledIrrigationListViewComponent);
+  }
+
+  openIrrigationPlanFormDialog(): void {
+    this.dialog.open(IrrigationPlanFormComponent);
   }
 }
