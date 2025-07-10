@@ -1,3 +1,15 @@
-<div class="w-lg h-150 p-8 flex flex-col">
-    <h2 class="font-bold text-xl text-gray-700" mat-dialog-title>Planification de l'arrosage</h2>
-</div>
+<form class="w-lg h-fit p-8 flex flex-col" [formGroup]="irrigationFormGroup" (ngSubmit)="onSubmit()">
+    <h2 class="!font-bold !text-xl !text-gray-700 !p-0" mat-dialog-title>Planification de l'arrosage</h2>
+    <mat-dialog-content class="!flex !flex-col !gap-8 !px-0 !py-8">
+        <time-range-input-form label="Plage horaire d'arrosage 1" startFormControl="startHour1" endFormControl="endHour1" />
+        <time-range-input-form label="Plage horaire d'arrosage 2" startFormControl="startHour2" endFormControl="endHour2" />
+    </mat-dialog-content>
+    <mat-dialog-actions class="!flex !flex-row !justify-between !items-center !p-0">
+        <!-- <div class="flex flex-row justify-between items-center"> -->
+        <button
+            class="bg-red-800 rounded-sm px-4 py-2 font-semibold text-sm text-white cursor-pointer active:scale-95" (click)="onCloseDialog()">Annuler</button>
+        <button
+            class="bg-green-800 rounded-sm px-4 py-2 font-semibold text-sm text-white cursor-pointer active:scale-95" type="submit">Valider</button>
+        <!-- </div> -->
+    </mat-dialog-actions>
+</form>
