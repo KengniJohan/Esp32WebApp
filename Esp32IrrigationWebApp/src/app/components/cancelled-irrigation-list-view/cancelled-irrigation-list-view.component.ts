@@ -13,22 +13,8 @@ import { Utils } from '../../utils';
 export class CancelledIrrigationListViewComponent {
 
   irrigations: IrrigationModel[] = [
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
-    new IrrigationModel(1, new Date(), new Date(), 'Pluie'),
+    new IrrigationModel(1, new Date(2025, 7, 8, 8, 0), new Date(2025, 7, 8, 8, 0), 'Pluie'),
+    new IrrigationModel(1, new Date(2025, 7, 7, 16, 0), new Date(2025, 7, 7, 16, 30), 'Pluie'),
   ];
   readonly dialogRef = inject(MatDialogRef<CancelledIrrigationListViewComponent>);
   locale!: string;
